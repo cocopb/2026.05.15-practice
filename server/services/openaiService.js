@@ -16,7 +16,7 @@ async function analyzeSentiment(text) {
             messages: [
                 {
                     role: "system",
-                    content: "Analyze the sentiment of the following text. Return JSON only in the following format: { \"sentiment\": \"positive\" | \"negative\" | \"neutral\", \"confidence\": number (0-100), \"reason\": \"string\" }"
+                    content: "Analyze the sentiment of the following text. The 'reason' field must be written in Korean. Return JSON only in the following format: { \"sentiment\": \"positive\" | \"negative\" | \"neutral\", \"confidence\": number (0-100), \"reason\": \"string (Korean)\" }"
                 },
                 {
                     role: "user",
