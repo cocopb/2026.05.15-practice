@@ -89,12 +89,11 @@ Emotion Insight AI
 첨부 이미지 스타일 참고.
 
 ## 디자인 키워드
-- 미래형 모빌리티
-- 친환경
-- 플랫 일러스트
-- 레드 포인트 컬러
-- 청록 배경
-- 미니멀 UI
+- 프리미엄 아트 갤러리 (Premium Art Gallery)
+- 앤티크 골드 (Antique Gold) & 딥 포레스트 그린 (Deep Forest Green)
+- 글래스모피즘 (Glassmorphism)
+- 클래식 & 모던 타이포그래피 (Serif & Sans-serif)
+- 고급스러운 공간감 (Wall Molding effect)
 
 ## 레이아웃 방향
 - 중앙 정렬
