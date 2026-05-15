@@ -1,0 +1,217 @@
+:root {
+    --primary-red: #ff3b3b;
+    --teal: #2ea7a0;
+    --bg-light: #f2efef;
+    --text-dark: #222222;
+    --white: #ffffff;
+    --gray-light: #e0e0e0;
+    --positive-color: #4caf50;
+    --negative-color: #f44336;
+    --neutral-color: #9e9e9e;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--teal);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--teal);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Main Content */
+main {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 30px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Input Card */
+.input-card h2 {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    border: 2px solid var(--gray-light);
+    border-radius: 12px;
+    font-size: 1rem;
+    resize: none;
+    transition: border-color var(--transition-speed);
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+}
+
+.char-count {
+    text-align: right;
+    font-size: 0.9rem;
+    color: var(--neutral-color);
+    margin-top: 5px;
+}
+
+.analyze-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-red);
+    color: var(--white);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.2s, background-color var(--transition-speed);
+}
+
+.analyze-btn:hover {
+    background-color: #e63535;
+    transform: translateY(-2px);
+}
+
+.analyze-btn:active {
+    transform: translateY(0);
+}
+
+.analyze-btn:disabled {
+    background-color: var(--gray-light);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Result Card */
+.result-card {
+    display: none; /* Hidden by default */
+}
+
+.result-card.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.sentiment-badge {
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+.sentiment-positive { background-color: var(--positive-color); }
+.sentiment-negative { background-color: var(--negative-color); }
+.sentiment-neutral { background-color: var(--neutral-color); }
+
+.confidence-score {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.reason-box {
+    background-color: var(--bg-light);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.reason-box h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--neutral-color);
+}
+
+/* Footer */
+footer {
+    padding: 40px 0;
+    text-align: center;
+    color: var(--neutral-color);
+    font-size: 0.9rem;
+}
+
+/* Error Container */
+.error-container {
+    color: var(--negative-color);
+    margin-top: 10px;
+    font-size: 0.9rem;
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .card { padding: 20px; }
+}
